@@ -39,6 +39,8 @@ function App() {
   }
 
   function removeNote(id) {
+    axios.delete(`http://localhost:5192/api/Notes/${id}`);
+
     setNotes(items => notes.filter(item => item.noteId !== id))
   }
 
