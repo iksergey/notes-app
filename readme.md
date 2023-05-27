@@ -49,3 +49,12 @@ React App
 -[Bootstrap](https://getbootstrap.com)
 
 - `npm install uuid` [url](https://www.npmjs.com/package/uuid)
+
+
+- `dotnet new sln -n NotesApp`
+- `dotnet new webapi -n Api`
+- `dotnet new classlib -n Persistence`
+- `dotnet sln add Api/Api.csproj`
+- `dotnet sln add Persistence/Persistence.csproj`
+- `cd api && dotnet add reference ../Persistence/Persistence.csproj`
+- `cd .. && dotnet restore`
