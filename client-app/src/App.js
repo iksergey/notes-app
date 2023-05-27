@@ -25,9 +25,11 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              <NotesRowItem note={notes[0]} />
-              <NotesRowItem note={notes[1]} />
-              <NotesRowItem note={notes[2]} />
+              {
+                notes.map(item =>
+                  <NotesRowItem note={item} />
+                )
+              }
             </tbody>
           </table>
         </div>
