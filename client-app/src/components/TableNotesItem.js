@@ -13,7 +13,7 @@ export default function TableNotesItem(props) {
       <tbody>
         {
           props.notes.map(item =>
-            <NotesRowItem note={item} />
+            <NotesRowItem note={item} key={item.rowNumber} />
           )
         }
       </tbody>
