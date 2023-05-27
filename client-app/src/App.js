@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import TableNoteItems from './components/TableNotesItem';
+import NewNoteForm from './components/NewNoteForm';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           >
             Add new note
           </button>
+          <NewNoteForm />
         </div>
       </div>
     </div >
