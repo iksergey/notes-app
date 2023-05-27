@@ -1,16 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import TableNoteItems from './components/TableNotesItem';
 import NewNoteForm from './components/NewNoteForm';
 import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios'
 
 function App() {
 
-  const [notes, setNotes] = useState([
-    { noteId: uuidv4(), rowTitle: "Some title 1", rowDescription: "Some description 1" },
-    { noteId: uuidv4(), rowTitle: "Some title 2", rowDescription: "Some description 2" },
-    { noteId: uuidv4(), rowTitle: "Some title 3", rowDescription: "Some description 3" },
-  ]);
+  const [notes, setNotes] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5192/api/Notes/')
+      .then(res => {
+        console.log(res);
+        const data = [];
+
+        res.data.forEach((value) => {
+          data.push(
+            {
+              noteId: value.id,
+              rowTitle: value.title,
+              rowDescription: value.description
+            }
+          );
+        })
+
+        setNotes(data);
+      })
+  }, []);
 
   function addNote(rowTitle, rowDescription) {
     const tempNote = {
