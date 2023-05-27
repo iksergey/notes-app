@@ -1,4 +1,5 @@
 import './App.css';
+import NotesRowItem from './components/NotesRowItem'
 
 function App() {
   return (
@@ -17,24 +18,9 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <th>Title 1</th>
-                <th>Description 1</th>
-              </tr>
-
-              <tr>
-                <th scope="row">2</th>
-                <th>Title 2</th>
-                <th>Description 2</th>
-              </tr>
-
-              <tr>
-                <th scope="row">3</th>
-                <th>Title 3</th>
-                <th>Description 3</th>
-              </tr>
-
+              <NotesRowItem />
+              <NotesRowItem />
+              <NotesRowItem />
             </tbody>
           </table>
         </div>
