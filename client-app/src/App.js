@@ -1,12 +1,13 @@
 import './App.css';
 import TableNoteItems from './components/TableNotesItem';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
   const notes = [
-    { rowNumber: 1, rowTitle: "Some title 1", rowDescription: "Some description 1" },
-    { rowNumber: 2, rowTitle: "Some title 2", rowDescription: "Some description 2" },
-    { rowNumber: 3, rowTitle: "Some title 3", rowDescription: "Some description 3" },
+    { rowNumber: uuidv4(), rowTitle: "Some title 1", rowDescription: "Some description 1" },
+    { rowNumber: uuidv4(), rowTitle: "Some title 2", rowDescription: "Some description 2" },
+    { rowNumber: uuidv4(), rowTitle: "Some title 3", rowDescription: "Some description 3" },
   ];
 
   return (
