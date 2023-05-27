@@ -54,7 +54,10 @@ React App
 - `dotnet new sln -n NotesApp`
 - `dotnet new webapi -n Api`
 - `dotnet new classlib -n Persistence`
+- `dotnet new classlib -n Domain`
 - `dotnet sln add Api/Api.csproj`
 - `dotnet sln add Persistence/Persistence.csproj`
-- `cd api && dotnet add reference ../Persistence/Persistence.csproj`
+- `dotnet sln add Domain/Domain.csproj`
+- `cd Api && dotnet add reference ../Persistence/Persistence.csproj`
+- `cd ../Persistence && dotnet add reference ../Domain/Domain.csproj`
 - `cd .. && dotnet restore`
