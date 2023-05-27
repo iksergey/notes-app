@@ -71,3 +71,5 @@ React App
 
 Миграция 
 - `dotnet ef migrations add initial-migration -s Api -p Persistence`
+
+Потребуется библиотека [axios](https://www.npmjs.com/package/axios) `npm i axios`
