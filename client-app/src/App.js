@@ -2,35 +2,35 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-      <div>
-        <div>
+    <div className='mt-5 container'>
+      <div className='card'>
+        <div className="card-header">
           <h1>Notes</h1>
         </div>
-        <div>
-          <table>
-            <thead>
+        <div className="card-body">
+          <table className="table table-hover">
+            <thead className="table-light">
               <tr>
-                <th>№</th>
-                <th>Title</th>
-                <th>Description</th>
+                <th scope="col">№</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th>1</th>
+                <th scope="row">1</th>
                 <th>Title 1</th>
                 <th>Description 1</th>
               </tr>
 
               <tr>
-                <th>2</th>
+                <th scope="row">2</th>
                 <th>Title 2</th>
                 <th>Description 2</th>
               </tr>
 
               <tr>
-                <th>3</th>
+                <th scope="row">3</th>
                 <th>Title 3</th>
                 <th>Description 3</th>
               </tr>
