@@ -36,13 +36,6 @@ function App() {
             notes={notes}
             removeNote={removeNote}
           />
-          <button
-            type="button"
-            className="btn btn-success"
-            onClick={() => { }}
-          >
-            Add new note
-          </button>
           <NewNoteForm addNote={addNote} />
         </div>
       </div>
