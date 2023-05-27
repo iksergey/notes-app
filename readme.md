@@ -61,3 +61,10 @@ React App
 - `cd Api && dotnet add reference ../Persistence/Persistence.csproj`
 - `cd ../Persistence && dotnet add reference ../Domain/Domain.csproj`
 - `cd .. && dotnet restore`
+
+Библиотека EF для PostgreSQL:
+- `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL`
+
+Библиотеки для миграций 
+- `dotnet add package Microsoft.EntityFrameworkCore.Design`
+- `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL.Design`
