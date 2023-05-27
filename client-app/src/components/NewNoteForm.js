@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function NewNoteForm() {
+export default function NewNoteForm(props) {
+  const [noteTitle, setNoteTitle] = useState("");
+  const [noteDescription, setNoteDescription] = useState("");
+
   return (
     <div>
       <form>
@@ -11,6 +14,7 @@ export default function NewNoteForm() {
             type="text"
             className="form-control"
             required
+            onChange={arg => { setNoteTitle(val => val = arg.target.value); }}
           />
         </div>
 
@@ -20,13 +24,14 @@ export default function NewNoteForm() {
             className="form-control"
             rows={5}
             required
+            onChange={arg => { setNoteDescription(val => val = arg.target.value); }}
           />
         </div>
 
         <button
           type="button"
           className="btn btn-primary"
-          onClick={() => { console.log('NewNoteForm btn click '); }}
+          onClick={() => { props.addNote(noteTitle, noteDescription); }}
         >
           Add
         </button>

@@ -12,12 +12,11 @@ function App() {
     { noteId: uuidv4(), rowTitle: "Some title 3", rowDescription: "Some description 3" },
   ]);
 
-  function addNote() {
-    const number = notes.length + 1;
+  function addNote(rowTitle, rowDescription) {
     const tempNote = {
       noteId: uuidv4(),
-      rowTitle: `Some title ${number}`,
-      rowDescription: `Some description ${number}`
+      rowTitle: rowTitle,
+      rowDescription: rowDescription
     };
     setNotes(notes => [...notes, tempNote]);
   }
@@ -33,11 +32,11 @@ function App() {
           <button
             type="button"
             className="btn btn-success"
-            onClick={() => addNote()}
+            onClick={() => { }}
           >
             Add new note
           </button>
-          <NewNoteForm />
+          <NewNoteForm addNote={addNote} />
         </div>
       </div>
     </div >
