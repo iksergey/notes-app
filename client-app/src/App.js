@@ -12,7 +12,6 @@ function App() {
   useEffect(() => {
     axios.get('http://localhost:5192/api/Notes/')
       .then(res => {
-        console.log(res);
         const data = [];
 
         res.data.forEach((value) => {
@@ -35,6 +34,12 @@ function App() {
       rowTitle: rowTitle,
       rowDescription: rowDescription
     };
+    const content = {
+      id: tempNote.noteId,
+      title: tempNote.rowTitle,
+      description: tempNote.rowDescription,
+    }
+    axios.post('http://localhost:5192/api/Notes', content);
     setNotes(notes => [...notes, tempNote]);
   }
 
