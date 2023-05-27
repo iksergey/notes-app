@@ -68,3 +68,6 @@ React App
 Библиотеки для миграций 
 - `dotnet add package Microsoft.EntityFrameworkCore.Design`
 - `dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL.Design`
+
+Миграция 
+- `dotnet ef migrations add initial-migration -s Api -p Persistence`
