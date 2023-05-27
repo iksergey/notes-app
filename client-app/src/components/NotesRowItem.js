@@ -1,13 +1,9 @@
-export default function NotesRowItem() {
-  const rowNumber = 1;
-  const rowTitle = "Some title";
-  const rowDescription = "Some description";
-
+export default function NotesRowItem(props) {
   return (
     <tr>
-      <th scope="row">{rowNumber}</th>
-      <th>{rowTitle}</th>
-      <th>{rowDescription}</th>
+      <th scope="row">{props.note.rowNumber}</th>
+      <th>{props.note.rowTitle}</th>
+      <th>{props.note.rowDescription}</th>
     </tr>
   );
 }

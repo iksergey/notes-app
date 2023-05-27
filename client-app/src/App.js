@@ -2,6 +2,9 @@ import './App.css';
 import NotesRowItem from './components/NotesRowItem'
 
 function App() {
+
+  const note = { rowNumber: 1, rowTitle: "Some title 1", rowDescription: "Some description 1" };
+
   return (
     <div className='mt-5 container'>
       <div className='card'>
@@ -18,9 +21,9 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              <NotesRowItem />
-              <NotesRowItem />
-              <NotesRowItem />
+              <NotesRowItem note={note} />
+              <NotesRowItem note={note} />
+              <NotesRowItem note={note} />
             </tbody>
           </table>
         </div>
