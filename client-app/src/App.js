@@ -21,6 +21,10 @@ function App() {
     setNotes(notes => [...notes, tempNote]);
   }
 
+  function removeNote(id) {
+    setNotes(items => notes.filter(item => item.noteId !== id))
+  }
+
   return (
     <div className='mt-5 container'>
       <div className='card'>
@@ -28,7 +32,10 @@ function App() {
           <h1>Notes</h1>
         </div>
         <div className="card-body">
-          <TableNoteItems notes={notes} />
+          <TableNoteItems
+            notes={notes}
+            removeNote={removeNote}
+          />
           <button
             type="button"
             className="btn btn-success"

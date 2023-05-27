@@ -13,7 +13,12 @@ export default function TableNotesItem(props) {
       <tbody>
         {
           props.notes.map((item, count) =>
-            <NotesRowItem note={item} rowNumber={count + 1} key={item.noteId} />
+            <NotesRowItem
+              note={item}
+              rowNumber={count + 1}
+              key={item.noteId}
+              removeNote={props.removeNote}
+            />
           )
         }
       </tbody>
