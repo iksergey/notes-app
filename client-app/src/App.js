@@ -11,7 +11,14 @@ function App() {
   ];
 
   function addNote() {
-    console.log('add note');
+    const number = notes.length + 1;
+    notes.push(
+      {
+        noteId: uuidv4(),
+        rowTitle: `Some title ${number}`,
+        rowDescription: `Some description ${number}`
+      }
+    );
   }
 
   return (
