@@ -3,7 +3,11 @@ import NotesRowItem from './components/NotesRowItem'
 
 function App() {
 
-  const note = { rowNumber: 1, rowTitle: "Some title 1", rowDescription: "Some description 1" };
+  const notes = [
+    { rowNumber: 1, rowTitle: "Some title 1", rowDescription: "Some description 1" },
+    { rowNumber: 2, rowTitle: "Some title 2", rowDescription: "Some description 2" },
+    { rowNumber: 3, rowTitle: "Some title 3", rowDescription: "Some description 3" },
+  ];
 
   return (
     <div className='mt-5 container'>
@@ -21,9 +25,9 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              <NotesRowItem note={note} />
-              <NotesRowItem note={note} />
-              <NotesRowItem note={note} />
+              <NotesRowItem note={notes[0]} />
+              <NotesRowItem note={notes[1]} />
+              <NotesRowItem note={notes[2]} />
             </tbody>
           </table>
         </div>
