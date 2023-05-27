@@ -47,3 +47,5 @@ React App
 
 ## Красота
 -[Bootstrap](https://getbootstrap.com)
+
+- `npm install uuid` [url](https://www.npmjs.com/package/uuid)
