@@ -12,8 +12,8 @@ export default function TableNotesItem(props) {
       </thead>
       <tbody>
         {
-          props.notes.map(item =>
-            <NotesRowItem note={item} key={item.rowNumber} />
+          props.notes.map((item, count) =>
+            <NotesRowItem note={item} rowNumber={count + 1} key={item.noteId} />
           )
         }
       </tbody>

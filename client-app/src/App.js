@@ -5,9 +5,9 @@ import { v4 as uuidv4 } from 'uuid';
 function App() {
 
   const notes = [
-    { rowNumber: uuidv4(), rowTitle: "Some title 1", rowDescription: "Some description 1" },
-    { rowNumber: uuidv4(), rowTitle: "Some title 2", rowDescription: "Some description 2" },
-    { rowNumber: uuidv4(), rowTitle: "Some title 3", rowDescription: "Some description 3" },
+    { noteId: uuidv4(), rowTitle: "Some title 1", rowDescription: "Some description 1" },
+    { noteId: uuidv4(), rowTitle: "Some title 2", rowDescription: "Some description 2" },
+    { noteId: uuidv4(), rowTitle: "Some title 3", rowDescription: "Some description 3" },
   ];
 
   return (
