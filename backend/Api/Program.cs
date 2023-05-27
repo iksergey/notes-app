@@ -13,6 +13,16 @@ builder.Services.AddDbContext<DataContext>(op =>
   op.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQLConnection"));
 });
 
+builder.Services.AddCors(options =>
+{
+  options.AddPolicy("CorsAccessControlAllowOriginPolicy", policy =>
+  {
+    policy.AllowAnyMethod()
+          .AllowAnyHeader()
+          .WithOrigins("http://localhost:3000");
+  });
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -24,6 +34,8 @@ if (app.Environment.IsDevelopment())
   app.UseSwagger();
   app.UseSwaggerUI();
 }
+
+app.UseCors("CorsAccessControlAllowOriginPolicy");
 
 app.UseHttpsRedirection();
 
