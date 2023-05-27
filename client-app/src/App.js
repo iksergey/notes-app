@@ -1,5 +1,5 @@
 import './App.css';
-import NotesRowItem from './components/NotesRowItem'
+import TableNoteItems from './components/TableNotesItem';
 
 function App() {
 
@@ -16,22 +16,7 @@ function App() {
           <h1>Notes</h1>
         </div>
         <div className="card-body">
-          <table className="table table-hover">
-            <thead className="table-light">
-              <tr>
-                <th scope="col">№</th>
-                <th scope="col">Title</th>
-                <th scope="col">Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                notes.map(item =>
-                  <NotesRowItem note={item} />
-                )
-              }
-            </tbody>
-          </table>
+          <TableNoteItems notes={notes} />
         </div>
       </div>
     </div>
