@@ -10,6 +10,10 @@ function App() {
     { noteId: uuidv4(), rowTitle: "Some title 3", rowDescription: "Some description 3" },
   ];
 
+  function addNote() {
+    console.log('add note');
+  }
+
   return (
     <div className='mt-5 container'>
       <div className='card'>
@@ -18,9 +22,16 @@ function App() {
         </div>
         <div className="card-body">
           <TableNoteItems notes={notes} />
+          <button
+            type="button"
+            className="btn btn-success"
+            onClick={() => addNote()}
+          >
+            Add new note
+          </button>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
