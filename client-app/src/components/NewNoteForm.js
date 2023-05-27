@@ -4,6 +4,13 @@ export default function NewNoteForm(props) {
   const [noteTitle, setNoteTitle] = useState("");
   const [noteDescription, setNoteDescription] = useState("");
 
+  function submit() {
+    if (!noteTitle || !noteDescription) return;
+
+    props.addNote(noteTitle, noteDescription);
+    setNoteTitle("");
+    setNoteDescription("");
+  }
   return (
     <div>
       <form>
@@ -14,6 +21,7 @@ export default function NewNoteForm(props) {
             type="text"
             className="form-control"
             required
+            value={noteTitle}
             onChange={arg => { setNoteTitle(val => val = arg.target.value); }}
           />
         </div>
@@ -24,6 +32,7 @@ export default function NewNoteForm(props) {
             className="form-control"
             rows={5}
             required
+            value={noteDescription}
             onChange={arg => { setNoteDescription(val => val = arg.target.value); }}
           />
         </div>
@@ -31,7 +40,7 @@ export default function NewNoteForm(props) {
         <button
           type="button"
           className="btn btn-primary"
-          onClick={() => { props.addNote(noteTitle, noteDescription); }}
+          onClick={() => { submit(); }}
         >
           Add
         </button>
