@@ -33,5 +33,11 @@ namespace Api.Controllers
       dataContext.Notes.Remove(note);
       return Ok(await dataContext.SaveChangesAsync());
     }
+    [HttpPost]
+    public async Task<IActionResult> Create(Note note)
+    {
+      dataContext.Notes.Add(note);
+      return Ok(await dataContext.SaveChangesAsync());
+    }
   }
 }
