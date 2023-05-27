@@ -7,12 +7,20 @@ export default function NewNoteForm() {
 
         <div className="mb-3">
           <label className="form-label">Note title</label>
-          <input type='text' className="form-control" required />
+          <input
+            type="text"
+            className="form-control"
+            required
+          />
         </div>
 
         <div className="mb-3">
           <label className="form-label">Note description</label>
-          <textarea type='text' className="form-control" rows={5} required />
+          <textarea
+            className="form-control"
+            rows={5}
+            required
+          />
         </div>
 
         <button
