@@ -1,5 +1,7 @@
 # Users
 .DS_Store
+appsettings.Development.json
+appsettings.json
 
 # Logs
 logs
